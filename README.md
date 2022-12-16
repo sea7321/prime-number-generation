@@ -20,7 +20,6 @@ $ cd prime-number-generation
 ```
 
 ### Executing program
-
 ```
 # Run the program
 $ dotnet run <bits> <count>
@@ -28,7 +27,5 @@ $ dotnet run <bits> <count>
 * Bits - the number of bits of the prime number, this must be a multiple of 8, and at least 32 bits.
 * Count - the number of prime numbers to generate, defaults to 1
 
-
 ## Author
-
 Savannah Alfaro, sea2985@rit.edu
