@@ -1,5 +1,5 @@
 # Prime Number Generation
-![alt example output](/resources/PrimeGen.png)
+![alt example output](./resources/background.png)
 
 ## Description
 A program that generates large prime numbers using the C# parallel libraries given a bit length and count.
