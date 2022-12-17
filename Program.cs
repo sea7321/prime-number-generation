@@ -116,22 +116,30 @@ namespace PrimeGen
         {
             // instantiate Prime Gen
             var primeGen = new PrimeGen();
-            
-            // check command line arguments
-            if (args.Length != 1 && args.Length != 2)
+
+            try
+            {
+                // check command line arguments
+                if (args.Length != 1 && args.Length != 2)
+                {
+                    Console.WriteLine(HelpMessage);
+                    Environment.Exit(0);
+                }
+                else if (args.Length == 1)
+                {
+                    primeGen._bits = Int32.Parse(args[0]);
+                    primeGen._count = 1;
+                }
+                else
+                {
+                    primeGen._bits = Int32.Parse(args[0]);
+                    primeGen._count = Int32.Parse(args[1]);
+                }
+            }
+            catch (Exception e)
             {
                 Console.WriteLine(HelpMessage);
                 Environment.Exit(0);
-            }
-            else if (args.Length == 1)
-            {
-                primeGen._bits = Int32.Parse(args[0]);
-                primeGen._count = 1;
-            }
-            else
-            {
-                primeGen._bits = Int32.Parse(args[0]);
-                primeGen._count = Int32.Parse(args[1]);
             }
 
             // print number of bits
